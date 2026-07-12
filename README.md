@@ -6,7 +6,8 @@ revisados en clase, aplicado a un caso real del **sector agroindustrial
 ecuatoriano**: la optimización del proceso de secado de **chips de plátano
 verde** (*Musa paradisiaca*).
 
-> Curso: Optimización  Universidad Central del Ecuador — Facultad de Ciencias Económicas — Carrera de Estadística
+> Curso: Diseño y Análisis de Experimentos / Inferencia Estadística
+> Universidad Central del Ecuador — Facultad de Ciencias Económicas — Carrera de Estadística
 > **Tema:** Inferencia estadística en RSM de segundo orden
 
 ---

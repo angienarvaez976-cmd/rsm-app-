@@ -35,6 +35,12 @@ if "already_coded" not in st.session_state:
     st.session_state["already_coded"] = False
 if "models" not in st.session_state:
     st.session_state["models"] = {}
+if "opt_results" not in st.session_state:
+    st.session_state["opt_results"] = {}
+if "desirability_result" not in st.session_state:
+    st.session_state["desirability_result"] = None
+if "dataset_name" not in st.session_state:
+    st.session_state["dataset_name"] = None
 
 st.title("📐 Aplicativo de RSM — Inferencia Estadística de Segundo Orden")
 st.caption(
@@ -89,11 +95,17 @@ if usar_ejemplo:
         "Espesor": (1.0, 3.0),
     }
     st.session_state["models"] = {}
+    st.session_state["opt_results"] = {}
+    st.session_state["desirability_result"] = None
+    st.session_state["dataset_name"] = "ejemplo_chips_platano.csv"
     st.success("Datos de ejemplo cargados: 17 corridas (Box-Behnken, k=3, 5 puntos centrales).")
 
 elif uploaded is not None:
     st.session_state["data"] = pd.read_csv(uploaded)
     st.session_state["models"] = {}
+    st.session_state["opt_results"] = {}
+    st.session_state["desirability_result"] = None
+    st.session_state["dataset_name"] = uploaded.name
     st.success(f"Archivo cargado: {uploaded.name} ({len(st.session_state['data'])} filas).")
 
 data = st.session_state["data"]
